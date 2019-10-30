@@ -56,7 +56,7 @@ This enables truly asynchronous Lightning network payments and is yet another re
 
 
 ## Public Discussion on the mailing list
-- https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002259.html
-- https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002260.html
-- https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002263.html
-- https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002268.html
+- Nadav Kohen: https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002259.html
+- ZmnSCPxj: https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002260.html
+    - Konstantin to ZmnSCPxj: https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002263.html
+- Yaacov Akiba Slama: https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002268.html
