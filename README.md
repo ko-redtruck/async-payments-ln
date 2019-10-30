@@ -53,3 +53,10 @@ A comes online
 ## Conclusion
 
 This enables truly asynchronous Lightning network payments and is yet another reason to move to payment points and scalars. In addition, this outsources the routing to S for the payment from A to B in the first scheme.
+
+
+## Public Discussion on the mailing list
+- https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002259.html
+- https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002260.html
+- https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002263.html
+- https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002268.html
