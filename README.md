@@ -24,6 +24,11 @@ When A comes back online S gives A the invoice signed (with the payment point s*
 
 ### Potential Issues
 
+#### Wrong timelocks
+In case the timelock on the payment between S and B is longer than on the previous update transaction, A and B can steal money from S. If the payment between S and B is already initiated/ the money is locked up, A can publish the old update transaction on chain. If B waits/does not claim the payment before the timelock on the update transaction expires, A can settle the channel on chain with the old balance. Now B releases the signature to S and claims the payment but because the channel is already settled the signature is worthless.
+
+To solve the problem the timelock on the update transaction must be longer than the timelock on the payment between S and B. If this is not the case with defaults values, the timelock on the payment must be decreased or A and S sign a new settlement + update transaction before the procedure with the same balance but a longer time lock. The best possible solution would be if we could give S the power to finish/stop the payment somehow with some smart payment points / amp style setup.
+
 #### Privacy
 S currently knows both the sender and the receiver of the payment. If we split the payment from S to B into two payments between S and public routing node P and P and B by still using the same scalar + payment point, S only knows the sender and P only knows the receiver. To further increase privavcy we can split the payment multiple times but all nodes involved must support this feature.
 
@@ -35,6 +40,9 @@ Obviously the communication channel must be end to end encrypted otherwise this 
 
 #### Proof of payment 
 The invoice by B with the payment point s*G and s is not sufficient as a PoP because S can simply give A the invoice and A already knows s.  
+
+- Solution: https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-October/002259.html -Nadav Kohen
+
 
 ## the other way around
 We can also do in a way that A can instantly send B (who is offline) money but now A is in charge of enforcing the channel state if S cheats. Because it has more issues like who pays the transaction fees if S cheats and because I believe Lightning is generally not designed for people who are offline for a long time I prefer the first one. But here is the other one:
