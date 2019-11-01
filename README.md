@@ -2,7 +2,11 @@
 asynchronous Lightning Network payments
 
 ## Problem
-Currently both parties have to be online at the same time to send/ receive money. This can be avoided by using something like the Lightning Rod Protocol by Breez (https://github.com/breez/LightningRod). However, funds have to be locked up longer than usual. We can do better than that. 
+Currently both parties have to be online at the same time to send/ receive money. This can be avoided by using something like the Lightning Rod Protocol by Breez (https://github.com/breez/LightningRod). However, funds have to be locked up longer than usual. 
+
+Christian Decker and Rusty Russell talk about the downsides of Holding onto in-flight HTLCs:
+ - https://mobile.twitter.com/Snyke/status/1189112896606916609
+ - https://mobile.twitter.com/rusty_twit/status/1189476934280810496
 
 ## Solution
 The payer A pre-signs a transaction handing over money to their local channel partner S and sends the transaction to the payee B in an end to end encrypted communication channel. B can then sell the signature for the transaction to S using pay-for-signature made possible by payment points and scalars. (https://lists.linuxfoundation.org/pipermail/lightning-dev/2019-July/002077.html)
