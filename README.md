@@ -4,7 +4,7 @@ asynchronous Lightning Network payments
 ## Problem
 Currently both parties have to be online at the same time to send/ receive money. This can be avoided by using something like the Lightning Rod Protocol by Breez (https://github.com/breez/LightningRod). However, funds have to be locked up longer than usual. 
 
-Christian Decker and Rusty Russell talk about the downsides of Holding onto in-flight HTLCs:
+Christian Decker and Rusty Russell talk about the downsides of Holding on to in-flight HTLCs:
  - https://mobile.twitter.com/Snyke/status/1189112896606916609
  - https://mobile.twitter.com/rusty_twit/status/1189476934280810496
 
